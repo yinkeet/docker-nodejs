@@ -1,9 +1,15 @@
 # Docker NodeJS
 
-***
-## How to use
+This is a bootstrap for developing NodeJS apps using Docker.
+Under the hood it uses Gulp to automate tasks and watch for file changes.
 
-### Running the server in development mode
+Browsersync is used in development mode to reload browser(s) automatically on file changes.
+For minification and transpilation, gulp-sass and gulp-ugilify are used in conjunction with gulp-sourcemaps .
+
+***
+## Development
+
+### Running the server
 
 1. Prepare the utilities script
 
@@ -62,6 +68,28 @@
 3. Anytime you make changes to any js file in the resources folder, an uglified js file with the same name and **min** extension will be compiled in the corresponding public folder. In this example **custom.min.js** can be found at **src/public/hello-world**.
 
 4. You could also add a **JS** file directly to any js folder in the **public** folder. But bear in mind that if a same named **SCSS** file also exists in the css folder it will be overwritten.
+
+## Production
+
+### Running server in production
+
+Running the server in production is easy, there are 2 commands in **docker-utilities** to help us do just that.
+
+1. Prepare the utilities script (skip this step if you have already done it)
+
+        $ chmod +x docker-utilities.sh
+
+    to make the it executable.
+
+2. Run the server by using the utilities shell script included
+
+        $ ./docker-utilities.sh build-run-prod
+
+    This command builds the resources folder for production then runs the server in production mode.
+
+        $ ./docker-utilities.sh run-prod
+
+    This command just runs the server in production mode.
 
 ### Folder structure
 
