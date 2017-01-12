@@ -6,6 +6,8 @@ Under the hood it uses Gulp to automate tasks and watch for file changes.
 Browsersync is used in development mode to reload browser(s) automatically on file changes.
 For minification and transpilation, gulp-sass and gulp-ugilify are used in conjunction with gulp-sourcemaps .
 
+Handlebars is used as the default templating engine here, but you can choose to modify this to anything you want.
+
 ***
 ## Development
 

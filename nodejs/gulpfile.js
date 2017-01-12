@@ -26,7 +26,8 @@ gulp.task('browser-sync', ['server'], function() {
   gulp.watch('app/resources/**/sass/*.scss', ['sass']);
   gulp.watch('app/resources/**/js/*.js', ['uglify']);
   gulp.watch(['app/public/*.html', 'app/public/**/*.html']).on('change', browserSync.reload);
-  gulp.watch('app/controllers/**/*.js').on('change', function() {
+  gulp.watch('app/bin/**/*.js').on('change', spawnServer);
+  gulp.watch(['app/bin/**/*.js', 'app/controllers/**/*.js', 'app/views/**/*.*']).on('change', function() {
     if (!reload) {
       reload = true;
       spawnServer();
