@@ -1,0 +1,29 @@
+{
+  "name": "dockerized-nodejs",
+  "version": "1.0.0",
+  "description": "Dockerized NodeJS basic server.",
+  "author": "Wong Yin Keet <wongyinkeet@gmail.com>",
+  "license": "MIT",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/lancet/dockerized-nodejs"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "dependencies": {
+    "express": "4.14.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-debug": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "pump": "^1.0.2"
+  }
+}
